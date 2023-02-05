@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna Bella</title>
+    <style>
+        body{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        nav{
+            background-image: linear-gradient(to right, rgb(199, 199, 61), rgba(255, 21, 21, 0));
+        }
+        nav > .superior > img{
+            width: 100vw;
+            height: 50vh;
+            background-size: contain;
+            background-attachment: fixed; 
+           
+        }
+        nav > .inferior > ul{
+            display: flex;
+            flex-direction: row-reverse;
+            padding-right: 30px;
+        }
+        nav > .inferior > ul > li,a{
+            text-decoration: none;
+            list-style: none;
+            color: rgb(190, 190, 38);
+            padding: 5px 10px 5px 10px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        nav > .inferior > ul > li:hover a{
+            background-color:  rgb(82, 82, 24);
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .subinferiorior{
+            text-decoration: none;
+            text-align: center;
+            color: rgb(117, 117, 24);
+            padding: 5px 10px 5px 10px;
+            cursor: pointer;
+            display: none;
+
+        }
+        .subinferiorior > ul >li, a{
+            list-style: none;
+            padding: 10px;
+        }
+        .subinferiorior > ul > li:hover a{
+            background-color:  rgb(82, 82, 24);
+            border-radius: 10px;
+            transition: 0.3s;
+            list-style: none;
+
+        }
+        .material-icons{
+        display: flex;
+        justify-content: space-evenly;
+        color:rgb(84, 84, 7);
+        font-size: 2em;
+        cursor: pointer;
+        display: none;
+        }
+        main > .sobre > h2{
+            text-align: center;
+            color: rgb(82, 82, 24) ;
+        }
+        main > .sobre > p{
+            text-indent: 50px;
+            text-align: justify;
+            width: 80vw;
+            margin: auto;
+        } 
+        @media screen and (min-width: 300px) and (max-width: 667px) {
+            div.inferior {
+                display: none;
+            }
+            .material-icons{
+                display: block;
+                text-align: center;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="superior"><img src="ProjetoAnnaBellaparte2/imagens/capa.png" alt="banner background"></div>
+        <div class="inferior">
+            <ul id="menu">
+                <li><a href="blog.html">HOME</a></li>
+                <li><a href="">BIOGRÁFIA</a></li>
+                <li><a href="Campanhas_publicitária.html">CAMPANHIAS PUBLICITÁRIAS</a></li>
+                <li><a href="contato.html">CONTATO</a></li>
+            </ul>
+           
+        </div> 
+        <span class="material-icons" onclick="menu()">menu</span>
+            <div class="subinferiorior">
+                <ul id="menu">
+                    <li><a href="blog.html">HOME</a></li>
+                    <li><a href="">BIOGRÁFIA</a></li>
+                    <li><a href="Campanhas_publicitária.html">CAMPANHIAS PUBLICITÁRIAS</a></li>
+                    <li><a href="contato.html">CONTATO</a></li>
+                </ul>
+            </div>
+    </nav>
+    <main>
+        <section class="sobre">
+            <h2>Sobre <span>Anna Bella</span></h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores totam porro optio. Iusto ab saepe neque impedit iure aliquam. Quo at et nemo reiciendis assumenda adipisci voluptates omnis soluta dolore!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, distinctio asperiores! Dolor atque, error iusto earum possimus id ex facere accusamus nihil explicabo alias? Adipisci quam in eius tenetur inventore? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, doloribus. Iure error natus eius cum illo nesciunt, ullam, alias repellendus veniam, possimus sit nam distinctio assumenda fuga id suscipit repellat.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, officia quis explicabo unde nam in aliquam reprehenderit repellendus culpa vel pariatur minima quod fugit, suscipit libero vitae corporis sapiente fugiat.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas consectetur consequuntur, adipisci, laborum ducimus provident sequi quo earum assumenda dolor possimus error corrupti necessitatibus, perspiciatis ipsam! Eum alias minima suscipit.</p>
+        
+        </section>
+    </main>
+    <script>
+        function menu(){
+            var itens = document.querySelector('div.subinferiorior')
+            if(itens.style.display == 'block'){
+                itens.style.display = 'none'
+            }else {
+                itens.style.display ='block'
+                
+        }
+        }
+    </script>
+</body>
+</html>
